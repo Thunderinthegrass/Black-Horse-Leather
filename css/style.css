@@ -5,7 +5,7 @@
 }
 
 header {
-	background: url(../image/leather-background.jpg);
+	background: url(../img/leather-background.jpg);
     height: 600px;
 }
 
@@ -346,4 +346,3 @@ img{
     transform: translateY(0px);
     transition-delay: 0.3s;
 }
-
