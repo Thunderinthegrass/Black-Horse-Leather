@@ -14,10 +14,10 @@ $(function(){
     asNavFor: '.slider',
     centerMode: true,
     centerPadding: '0px',
-    focusOnSelect: true,
-    vertical: true
+    focusOnSelect: true
+    // vertical: true
   });
-  $('.slider__item').zoom();
+	$('.slider__item').zoom();
 })
 
 $(document).ready(function() {
