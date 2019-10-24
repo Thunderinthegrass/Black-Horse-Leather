@@ -154,7 +154,7 @@ h2 {
 }
 
 img {
-    width: 300px;
+    width: 370px;
 }
 
 @keyframes text {
@@ -173,12 +173,15 @@ img {
     }
 }
 
+.view-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
 .view {
     max-width: 370px;
     width: 100%;
-    height: 200px;
     margin: 1px;
-    float: left;
     border: 1px solid #fff;
     overflow: hidden;
     position: relative;
@@ -189,17 +192,17 @@ img {
 }
 
 .view .mask, .view .content {
-    width: 300px;
-    height: 200px;
+    width: 370px;
+    height: 277.5px;
     position: absolute;
     overflow: hidden;
     top: 0;
-    left: 0
+    left: 0;
 }
 
 .view img {
     display: block;
-    position: relative
+    position: relative;
 }
 
 .view h2 {
@@ -210,7 +213,7 @@ img {
     font-size: 17px;
     padding: 10px;
     background: rgba(20, 7, 2, 0.8);
-    margin: 20px 0 0 0
+    margin: 80px 0 0 0;
 }
 
 .view p {
@@ -220,7 +223,7 @@ img {
     position: relative;
     color: #F2DBCD;
     padding: 10px 20px 20px;
-    text-align: center
+    text-align: center;
 }
 
 .view a.info {
@@ -230,153 +233,77 @@ img {
     background: #140702;
     color: #F2DBCD;
     text-transform: uppercase;
-    box-shadow: 0 0 1px #000
+    box-shadow: 0 0 1px #000;
 }
 
 .view a.info:hover {
-    box-shadow: 0 0 5px #000
+    box-shadow: 0 0 5px #000;
 }
 
-.view-third img {
-    transition: all 0.2s ease-in;
-    width: 300px;
-}
-
-.view-third .mask {
-    background-color: rgba(8, 3, 1, 0.6);
-    opacity: 0;
-    transform: translate(460px, -100px) rotate(180deg);
-    transition: all 0.2s 0.4s ease-in-out;
-}
-
-.view-third h2 {
-    transform: translateY(-100px);
-    transition: all 0.2s ease-in-out;
-}
-
-.view-third p {
-    transform: translateX(300px) rotate(90deg);
-    transition: all 0.2s ease-in-out;
-}
-
-.view-third a.info {
-    transform: translateY(-200px);
-    transition: all 0.2s ease-in-out;
-}
-
-.view-third:hover .mask {
-    opacity: 1;
-    transition-delay: 0s;
-    transform: translate(0px, 0px);
-}
-
-.view-third:hover h2 {
-    transform: translateY(0px);
-    transition-delay: 0.5s;
-}
-
-.view-third:hover p {
-    transform: translateX(0px) rotate(0deg);
-    transition-delay: 0.4s;
-}
-
-.view-third:hover a.info {
-    transform: translateY(0px);
-    transition-delay: 0.3s;
-}
-
+.view-third img,
+.view-first img,
 .view-second img {
     transition: all 0.2s ease-in;
-    width: 300px;
+    /* width: 300px; */
 }
 
+.view-third .mask,
+.view-first .mask,
 .view-second .mask {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(8, 3, 1, 0.6);
     opacity: 0;
-    transform: translate(460px, -100px) rotate(180deg);
-    transition: all 0.2s 0.4s ease-in-out;
+    /* transform: translate(460px, -100px) rotate(180deg); */
+    transform: scale(0);
+    transition: all 0.5s;
 }
 
+.view-third h2,
+.view-first h2,
 .view-second h2 {
     transform: translateY(-100px);
     transition: all 0.2s ease-in-out;
 }
 
+.view-third p,
+.view-first p,
 .view-second p {
     transform: translateX(300px) rotate(90deg);
     transition: all 0.2s ease-in-out;
 }
 
+.view-third a.info,
+.view-first a.info,
 .view-second a.info {
     transform: translateY(-200px);
     transition: all 0.2s ease-in-out;
 }
 
+.view-third:hover .mask,
+.view-first:hover .mask,
 .view-second:hover .mask {
     opacity: 1;
     transition-delay: 0s;
-    transform: translate(0px, 0px);
+    /* transform: translate(0px, 0px); */
+    transform: scale(1);
 }
 
+.view-third:hover h2,
+.view-first:hover h2,
 .view-second:hover h2 {
     transform: translateY(0px);
-    transition-delay: 0.5s;
+    transition-delay: 0.2s;
 }
 
+.view-third:hover p,
+.view-first:hover p,
 .view-second:hover p {
     transform: translateX(0px) rotate(0deg);
-    transition-delay: 0.4s;
-}
-
-.view-second:hover a.info {
-    transform: translateY(0px);
-    transition-delay: 0.3s;
-}
-
-.view-first img {
-    transition: all 0.2s ease-in;
-    width: 300px;
-}
-
-.view-first .mask {
-    background-color: rgba(0, 0, 0, 0.6);
-    opacity: 0;
-    transform: translate(460px, -100px) rotate(180deg);
-    transition: all 0.2s 0.4s ease-in-out;
-}
-
-.view-first h2 {
-    transform: translateY(-100px);
-    transition: all 0.2s ease-in-out;
-}
-
-.view-first p {
-    transform: translateX(300px) rotate(90deg);
-    transition: all 0.2s ease-in-out;
-}
-
-.view-first a.info {
-    transform: translateY(-200px);
-    transition: all 0.2s ease-in-out;
-}
-
-.view-first:hover .mask {
-    opacity: 1;
-    transition-delay: 0s;
-    transform: translate(0px, 0px);
-}
-
-.view-first:hover h2 {
-    transform: translateY(0px);
     transition-delay: 0.5s;
 }
 
-.view-first:hover p {
-    transform: translateX(0px) rotate(0deg);
-    transition-delay: 0.4s;
-}
-
-.view-first:hover a.info {
+.view-third:hover a.info,
+.view-first:hover a.info,
+.view-second:hover a.info {
     transform: translateY(0px);
     transition-delay: 0.3s;
 }
