@@ -1,4 +1,4 @@
-$(function(){
+$(document).ready(function(){
 
   $('.slider').slick({
     slidesToShow: 1,
@@ -14,8 +14,8 @@ $(function(){
     asNavFor: '.slider',
     centerMode: true,
     centerPadding: '0px',
-    focusOnSelect: true
-    // vertical: true
+		focusOnSelect: true,
+		infinite: true
   });
 	$('.slider__item').zoom();
 })
